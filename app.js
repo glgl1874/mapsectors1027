@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const fs = require('fs');
 const path = require('path');
+const PORT = process.env.PORT || 3000;
 
 // public 디렉토리에서 정적 파일 서빙
 app.use(express.static('public'));
@@ -18,6 +19,6 @@ app.get('/sectors', (req, res) => {
 });
 
 // 서버 실행
-app.listen(3000, () => {
-    console.log('서버가 http://localhost:3000 에서 실행 중입니다.');
+app.listen(PORT, () => {
+    console.log('서버가 http://localhost:${PORT} 에서 실행 중입니다.');
 });
