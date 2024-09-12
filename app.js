@@ -13,7 +13,7 @@ app.get('/sectors', (req, res) => {
       if (err) {
           res.status(500).send('섹터 데이터를 읽는 중 오류 발생');
       } else {
-          res.sendFile(_dirname + '/public/index.html');
+          res.sendFile(__dirname + '/public/index.html');
       }
   });
 });
