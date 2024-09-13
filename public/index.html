@@ -176,61 +176,79 @@
         let markers = [];
         // 섹터 데이터를 서버에서 불러옵니다.
         let sectors = [];
+        let points = [];
         const zoomThreshold = 18;
 
-        fetch('/sectors')
-            .then(response => response.json())
-            .then(data => {
-                sectors = data;
-                // 섹터를 지도에 추가합니다.
-                sectors.forEach(sector => {
-                    const polygon = L.polygon(sector.coordinates, { color: sector.color }).addTo(map);
-                    const centroid = polygon.getBounds().getCenter();
-                    const sectorLabel = L.divIcon({
-                        className: 'sector-label',
-                        html: `<div>${sector.name}</div>`,
-                    });
-                    const marker = L.marker(centroid, { icon: sectorLabel }).addTo(map);
-                    markers.push(marker);
+        Promise.all([
+            fetch('/sectors').then(response => response.json()),
+            fetch('/points').then(response => response.json())
+        ])
+        .then(([sectorsData, pointsData]) => {
+            sectors = sectorsData;
+            points = pointsData;
+
+            sectors.forEach(sector => {
+                const polygon = L.polygon(sector.coordinates, { color: sector.color }).addTo(map);
+                const centroid = polygon.getBounds().getCenter();
+                const sectorLabel = L.divIcon({
+                    className: 'sector-label',
+                    html: `<div>${sector.name}</div>`,
                 });
-            })
-            .catch(err => {
-                console.error('섹터 데이터를 불러오는 중 오류 발생:', err);
+                const marker = L.marker(centroid, { icon: sectorLabel }).addTo(map);
+                markers.push(marker);
             });
 
-            function adjustLabelVisibility() {
-                const currentZoom = map.getZoom();
-                markers.forEach(marker => {
-                    if (currentZoom < zoomThreshold) {
-                        marker.setOpacity(0);
-                    } else {
-                        marker.setOpacity(1);
-                    }
+            points.forEach(point => {
+                    const point_marker = L.marker(point.coordinates).addTo(map);
+                    point_marker.bindPopup(`<b>${point.name}</b><br><img src="${point.image}" 
+                    alt="${point.name}" style="width: 100px; height: auto;">`);
                 });
-            }
+        })
+        .catch(err => {
+            console.error('섹터 데이터를 불러오는 중 오류 발생:', err);
+        });
 
-            map.on('zoomend', adjustLabelVisibility);
+        function adjustLabelVisibility() {
+            const currentZoom = map.getZoom();
+            markers.forEach(marker => {
+                if (currentZoom < zoomThreshold) {
+                    marker.setOpacity(0);
+                } else {
+                    marker.setOpacity(1);
+                }
+            });
+        }
+
+        map.on('zoomend', adjustLabelVisibility);
             
         // 섹터를 검색하는 함수
         function searchSector() {
             const searchTerm = document.getElementById('search-box').value.toLowerCase();
-            const results = sectors.filter(sector => sector.name.toLowerCase() === searchTerm);
+
+            const sectorResults = sectors.filter(sector => sector.name.toLowerCase() === searchTerm);
+            const pointResults = points.filter(point => point.name.toLowerCase() === searchTerm);
             
             
             // 이전 검색 결과를 지웁니다.
             document.getElementById('search-results').innerHTML = '';
 
-            if (results.length === 0) {
+            if (sectorResults.length === 0 && pointResults.length === 0) {
                 customAlert("해당하는 구역이 존재하지 않습니다.");
                 return;
             }
 
             // 검색 결과를 표시합니다.
-            results.forEach(sector => {
+            sectorResults.forEach(sector => {
                 const bounds = L.latLngBounds(sector.coordinates.map(coord => [coord[0], coord[1]]));
                 const center = bounds.getCenter();
                 const zoomLevel = 19;
                 map.setView(center, zoomLevel);
+            });
+
+            pointResults.forEach(point => {
+                const point_marker = L.marker(point.coordinates).addTo(map);
+                point_marker.bindPopup(`<b>${point.name}</b><br><img src="${point.image}" 
+                alt="${point.name}" style="width: 100px; height: auto;">`);
             });
         }
 
@@ -267,7 +285,7 @@
                         closeModal();
                     }
                 }
-            })
+            });
         }
     </script>
 </body>

@@ -17,6 +17,17 @@ app.get('/sectors', (req, res) => {
   });
 });
 
+// 포인트 데이터를 제공하는 API 엔트포인트
+app.get('/points', (req, res) => {
+    fs.readFile(path.join(__dirname, 'points.json'), 'utf8', (err, data) => {
+        if (err) {
+            res.status(500).send('포인트 데이터를 읽는 중 오류 발생');
+        } else {
+            res.json(JSON.parse(data));
+        }
+    });
+});
+
 // 서버 실행
 app.listen(3000, () => {
     console.log('서버가 http://localhost:3000 에서 실행 중입니다.');

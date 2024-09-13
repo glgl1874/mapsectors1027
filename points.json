@@ -1,0 +1,12 @@
+[
+    {
+        "name": "서울타워",
+        "coordinates": [37.5512, 126.9882],
+        "image": "back2.jpg"
+    },
+    {
+        "name": "경복궁",
+        "coordinates": [37.5779, 126.9768],
+        "image": "back2.jpg"
+    }
+]
