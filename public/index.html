@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <html lang="kr">
 <head>
     <meta charset="UTF-8">
@@ -16,7 +15,6 @@
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            /*background-color: hsla(197, 52%, 48%, 0.199);*/
             background-image: url('back2.jpg');
             background-size: cover;
             background-position: center;
@@ -107,6 +105,20 @@
             font-size: 24px;
             cursor: pointer;
         }
+        .sector-label {
+            background-color: rgba(255, 255, 255, 0);
+            border-radius: 3px;
+            text-align: center;
+            font-weight: bold;
+            color: white;
+            white-space: nowrap;
+            padding: 5px;
+            font-size: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform: translate(-50%, -50%);
+        }
         @media (max-width: 768px) {
             h1 {
                 font-size: 24px;
@@ -150,6 +162,7 @@
         </div>
     </div>
 
+    
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script>
         // 지도를 초기화합니다.
@@ -160,27 +173,48 @@
             maxZoom: 19,
         }).addTo(map);
 
+        let markers = [];
         // 섹터 데이터를 서버에서 불러옵니다.
         let sectors = [];
+        const zoomThreshold = 18;
+
         fetch('/sectors')
             .then(response => response.json())
             .then(data => {
                 sectors = data;
                 // 섹터를 지도에 추가합니다.
                 sectors.forEach(sector => {
-                    L.polygon(sector.coordinates, {color: 'blue'})
-                        .bindPopup(sector.name)
-                        .addTo(map);
+                    const polygon = L.polygon(sector.coordinates, { color: 'blue' }).addTo(map);
+                    const centroid = polygon.getBounds().getCenter();
+                    const sectorLabel = L.divIcon({
+                        className: 'sector-label',
+                        html: `<div>${sector.name}</div>`,
+                    });
+                    const marker = L.marker(centroid, { icon: sectorLabel }).addTo(map);
+                    markers.push(marker);
                 });
             })
             .catch(err => {
                 console.error('섹터 데이터를 불러오는 중 오류 발생:', err);
             });
 
+            function adjustLabelVisibility() {
+                const currentZoom = map.getZoom();
+                markers.forEach(marker => {
+                    if (currentZoom < zoomThreshold) {
+                        marker.setOpacity(0);
+                    } else {
+                        marker.setOpacity(1);
+                    }
+                });
+            }
+
+            map.on('zoomend', adjustLabelVisibility);
+            
         // 섹터를 검색하는 함수
         function searchSector() {
             const searchTerm = document.getElementById('search-box').value.toLowerCase();
-            const results = sectors.filter(sector => sector.name.toLowerCase().includes(searchTerm));
+            const results = sectors.filter(sector => sector.name.toLowerCase() === searchTerm);
             
             
             // 이전 검색 결과를 지웁니다.
@@ -192,11 +226,25 @@
             }
 
             // 검색 결과를 표시합니다.
-            else results.forEach(sector => {
+            results.forEach(sector => {
                 const bounds = L.latLngBounds(sector.coordinates.map(coord => [coord[0], coord[1]]));
-                map.fitBounds(bounds)
+                const center = bounds.getCenter();
+                const zoomLevel = 19;
+                map.setView(center, zoomLevel);
             });
         }
+
+        document.getElementById('search-box').addEventListener('keydown', function(event) {
+            if (event.key === 'Enter') {
+                searchSector();
+            }
+        });
+
+        function closeModal() {
+            var modal = document.getElementById("customAlert");
+            modal.style.display = "none";
+        }
+
         function customAlert(message) {
             var modal = document.getElementById("customAlert");
             var messageElem = document.getElementById("alertMessage");
@@ -205,15 +253,21 @@
             messageElem.textContent = message;
             modal.style.display = "block";
 
-            closeBtn.onclick = function() {
-                modal.style.display = "none";
-            };
+            closeBtn.onclick = closeModal;
 
             window.onclick = function(event) {
                 if (event.target == modal) {
-                    modal.style.display = "none";
+                    closeModal();
                 }
             };
+
+            document.addEventListener('keydown', function(event) {
+                if (modal.style.display === 'block') {
+                    if (event.key === 'Enter' || event.key === 'Escape') {
+                        closeModal();
+                    }
+                }
+            })
         }
     </script>
 </body>
