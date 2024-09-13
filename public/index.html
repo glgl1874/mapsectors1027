@@ -178,6 +178,12 @@
         let sectors = [];
         let points = [];
         const zoomThreshold = 18;
+        const customIcon = L.icon({
+            iconUrl: 'pin.png',
+            iconSize: [40, 40],
+            iconAnchor: [16, 32],
+            popupAnchor: [0, -32,]
+        });
 
         Promise.all([
             fetch('/sectors').then(response => response.json()),
@@ -199,7 +205,7 @@
             });
 
             points.forEach(point => {
-                    const point_marker = L.marker(point.coordinates).addTo(map);
+                    const point_marker = L.marker(point.coordinates, { icon: customIcon }).addTo(map);
                     point_marker.bindPopup(`<b>${point.name}</b><br><img src="${point.image}" 
                     alt="${point.name}" style="width: 100px; height: auto;">`);
                 });
