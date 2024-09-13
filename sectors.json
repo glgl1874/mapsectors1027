@@ -1,6 +1,7 @@
 [
     {
         "name": "A1",
+        "color": "blue",
         "coordinates": [
             [
                 37.5760189861616,
@@ -78,6 +79,7 @@
     },
     {
         "name": "A2",
+        "color": "blue",
         "coordinates": [
             [
                 37.575090545068704,
@@ -103,6 +105,7 @@
     },
     {
         "name": "A3",
+        "color": "blue",
         "coordinates": [
             [
                 37.573538909092605,
@@ -128,6 +131,7 @@
     },
     {
         "name": "A4",
+        "color": "blue",
         "coordinates": [
             [
                 37.57031871025953,
@@ -153,6 +157,7 @@
     },
     {
         "name": "B1",
+        "color": "red",
         "coordinates": [
             [
                 37.57007268039378,
@@ -178,6 +183,7 @@
     },
     {
         "name": "B2",
+        "color": "red",
         "coordinates": [
             [
                 37.568250767995664,
@@ -207,6 +213,7 @@
     },
     {
         "name": "B3",
+        "color": "red",
         "coordinates": [
             [
                 37.56669250886377,
@@ -232,6 +239,7 @@
     },
     {
         "name": "B4",
+        "color": "red",
         "coordinates": [
             [
                 37.56576251113161,
@@ -257,6 +265,7 @@
     },
     {
         "name": "C1",
+        "color": "yellow",
         "coordinates": [
             [
                 37.563780391508516,
@@ -282,6 +291,7 @@
     },
     {
         "name": "C2",
+        "color": "yellow",
         "coordinates": [
             [
                 37.56258092651642,
@@ -307,6 +317,7 @@
     },
     {
         "name": "C3",
+        "color": "yellow",
         "coordinates": [
             [
                 37.56190998220241,
@@ -332,6 +343,7 @@
     },
     {
         "name": "D1",
+        "color": "green",
         "coordinates": [
             [
                 37.55975807626315,
@@ -365,6 +377,7 @@
     },
     {
         "name": "D2",
+        "color": "green",
         "coordinates": [
             [
                 37.55850887733867,
@@ -398,6 +411,7 @@
     },
     {
         "name": "E1",
+        "color": "purple",
         "coordinates": [
             [
                 37.55688014145885,
@@ -455,6 +469,7 @@
     },
     {
         "name": "E2",
+        "color": "purple",
         "coordinates": [
             [
                 37.55502357746326,
@@ -480,6 +495,7 @@
     },
     {
         "name": "A1-1",
+        "color": "blue",
         "coordinates": [
             [
                 37.57564345140051,
@@ -509,6 +525,7 @@
     },
     {
         "name": "A2-1",
+        "color": "blue",
         "coordinates": [
             [
                 37.57408972434358,
@@ -534,6 +551,7 @@
     },
     {
         "name": "A3-1",
+        "color": "blue",
         "coordinates": [
             [
                 37.573150284696325,
@@ -559,6 +577,7 @@
     },
     {
         "name": "A4-1",
+        "color": "blue",
         "coordinates": [
             [
                 37.57161440192576,
@@ -584,6 +603,7 @@
     },
     {
         "name": "A1-2",
+        "color": "blue",
         "coordinates": [
             [
                 37.575653543457705,
@@ -609,6 +629,7 @@
     },
     {
         "name": "A2-2",
+        "color": "blue",
         "coordinates": [
             [
                 37.57429288531361,
@@ -642,6 +663,7 @@
     },
     {
         "name": "A3-2",
+        "color": "blue",
         "coordinates": [
             [
                 37.572705423319036,
@@ -683,6 +705,7 @@
     },
     {
         "name": "A4-2",
+        "color": "blue",
         "coordinates": [
             [
                 37.57157664976796,
@@ -716,6 +739,7 @@
     },
     {
         "name": "B1-1",
+        "color": "red",
         "coordinates": [
             [
                 37.57001852679855,
@@ -741,6 +765,7 @@
     },
     {
         "name": "B2-1",
+        "color": "red",
         "coordinates": [
             [
                 37.56939051569978,
@@ -782,6 +807,7 @@
     },
     {
         "name": "B1-2",
+        "color": "red",
         "coordinates": [
             [
                 37.56938616733569,
@@ -807,6 +833,7 @@
     },
     {
         "name": "B2-2",
+        "color": "red",
         "coordinates": [
             [
                 37.569046667974774,
@@ -832,6 +859,7 @@
     },
     {
         "name": "B2-3",
+        "color": "red",
         "coordinates": [
             [
                 37.56808722800862,
@@ -857,6 +885,7 @@
     },
     {
         "name": "B3-1",
+        "color": "red",
         "coordinates": [
             [
                 37.56513538003581,
@@ -886,6 +915,7 @@
     },
     {
         "name": "B4-2",
+        "color": "red",
         "coordinates": [
             [
                 37.56460982670035,
@@ -919,6 +949,7 @@
     },
     {
         "name": "C1-1",
+        "color": "yellow",
         "coordinates": [
             [
                 37.5638141275238,
@@ -948,6 +979,7 @@
     },
     {
         "name": "C2-1",
+        "color": "yellow",
         "coordinates": [
             [
                 37.561897264110996,
@@ -981,6 +1013,7 @@
     },
     {
         "name": "C3-1",
+        "color": "yellow",
         "coordinates": [
             [
                 37.56227003052818,
@@ -1018,6 +1051,7 @@
     },
     {
         "name": "C1-2",
+        "color": "yellow",
         "coordinates": [
             [
                 37.563966967911654,
@@ -1051,6 +1085,7 @@
     },
     {
         "name": "C2-2",
+        "color": "yellow",
         "coordinates": [
             [
                 37.56185091252922,
@@ -1080,6 +1115,7 @@
     },
     {
         "name": "C3-2",
+        "color": "yellow",
         "coordinates": [
             [
                 37.5618574507027,
@@ -1109,6 +1145,7 @@
     },
     {
         "name": "D1-1",
+        "color": "green",
         "coordinates": [
             [
                 37.559513059958505,
@@ -1134,6 +1171,7 @@
     },
     {
         "name": "D2-1",
+        "color": "green",
         "coordinates": [
             [
                 37.558394495235504,
@@ -1163,6 +1201,7 @@
     },
     {
         "name": "D1-2",
+        "color": "green",
         "coordinates": [
             [
                 37.55928358089106,
@@ -1204,6 +1243,7 @@
     },
     {
         "name": "D2-2",
+        "color": "green",
         "coordinates": [
             [
                 37.55854472208556,
@@ -1237,6 +1277,7 @@
     },
     {
         "name": "의정부지 역사유적광장",
+        "color": "orange",
         "coordinates": [
             [
                 37.5751637937374,
@@ -1270,6 +1311,7 @@
     },
     {
         "name": "청계광장",
+        "color": "orange",
         "coordinates": [
             [
                 37.56938293758465,
@@ -1295,6 +1337,7 @@
     },
     {
         "name": "서울광장",
+        "color": "orange",
         "coordinates": [
             [
                 37.5661463219688,

@@ -184,7 +184,7 @@
                 sectors = data;
                 // 섹터를 지도에 추가합니다.
                 sectors.forEach(sector => {
-                    const polygon = L.polygon(sector.coordinates, { color: 'blue' }).addTo(map);
+                    const polygon = L.polygon(sector.coordinates, { color: sector.color }).addTo(map);
                     const centroid = polygon.getBounds().getCenter();
                     const sectorLabel = L.divIcon({
                         className: 'sector-label',
