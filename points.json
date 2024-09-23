@@ -8,5 +8,13 @@
         "name": "경복궁",
         "coordinates": [37.575128, 126.976749],
         "image": "pin.png"
+    },
+    {
+        "name" : "병원",
+        "coordinates" : [37.5667630123693, 126.967202493985],
+        "image" : "Hospital.png",
+        "description" : "서울 적십자 병원",
+        "description2" : "서울 종로구 새문안로 9 적십자병원",
+        "url" : "https://naver.me/xM2Xu8TC"
     }
 ]

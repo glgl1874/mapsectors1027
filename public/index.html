@@ -119,6 +119,13 @@
             justify-content: center;
             transform: translate(-50%, -50%);
         }
+        .popup-content {
+            display : flex;
+            flex-direction : column;
+            align-items : center;
+            justify-content : center;
+            text-align : center;
+        }
         @media (max-width: 768px) {
             h1 {
                 font-size: 24px;
@@ -178,12 +185,6 @@
         let sectors = [];
         let points = [];
         const zoomThreshold = 18;
-        const customIcon = L.icon({
-            iconUrl: 'pin.png',
-            iconSize: [40, 40],
-            iconAnchor: [16, 32],
-            popupAnchor: [0, -32,]
-        });
 
         Promise.all([
             fetch('/sectors').then(response => response.json()),
@@ -205,9 +206,15 @@
             });
 
             points.forEach(point => {
+                    const customIcon = L.icon({
+                        iconUrl: point.image,
+                        iconSize: [40, 40],
+                        iconAnchor: [16, 32],
+                        popupAnchor: [0, -32,]
+                    });
                     const point_marker = L.marker(point.coordinates, { icon: customIcon }).addTo(map);
-                    point_marker.bindPopup(`<b>${point.name}</b><br><img src="${point.image}" 
-                    alt="${point.name}" style="width: 100px; height: auto;">`);
+                    point_marker.bindPopup(`<div class="popup-content">
+                    <b style = "font-size : 18px;">${point.description}</b><b><br>${point.description2}<a href = "${point.url}">${point.url}</a></b></div>`);
                 });
         })
         .catch(err => {
