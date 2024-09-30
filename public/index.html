@@ -208,13 +208,13 @@
             points.forEach(point => {
                     const customIcon = L.icon({
                         iconUrl: point.image,
-                        iconSize: [40, 40],
+                        iconSize: point.iconSize || [40, 40],
                         iconAnchor: [16, 32],
                         popupAnchor: [0, -32,]
                     });
                     const point_marker = L.marker(point.coordinates, { icon: customIcon }).addTo(map);
                     point_marker.bindPopup(`<div class="popup-content">
-                    <b style = "font-size : 18px;">${point.description}</b><b><br>${point.description2}<a href = "${point.url}">${point.url}</a></b></div>`);
+                    <b style = "font-size : 18px;">${point.description}</b><b><br>${point.description2}<br><a href = "${point.url}">${point.url}</a></b></div>`);
                 });
         })
         .catch(err => {

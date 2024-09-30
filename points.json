@@ -2,19 +2,53 @@
     {
         "name": "서울타워",
         "coordinates": [37.570114, 126.977124],
-        "image": "pin.png"
+        "image": "pin.png",
+        "description" : "서울타워",
+        "description2" : "서울타워주소",
+        "url" : "https://naver.me/xM2Xu8TC"
     },
     {
         "name": "경복궁",
         "coordinates": [37.575128, 126.976749],
-        "image": "pin.png"
+        "image": "pin.png",
+        "description" : "경복궁",
+        "description2" : "경복궁주소",
+        "url" : "https://naver.me/xM2Xu8TC"
     },
     {
         "name" : "병원",
-        "coordinates" : [37.5667630123693, 126.967202493985],
+        "coordinates" : [37.56714211033935, 126.96705222129822],
         "image" : "Hospital.png",
         "description" : "서울 적십자 병원",
         "description2" : "서울 종로구 새문안로 9 적십자병원",
-        "url" : "https://naver.me/xM2Xu8TC"
+        "url" : "https://naver.me/xM2Xu8TC",
+        "iconSize" : [70, 70]
+    },
+    {
+        "name" : "화장실",
+        "coordinates" : [37.575743296582004, 126.97363337136169],
+        "image" : "Toilet.png",
+        "description" : "경복궁역내 화장실",
+        "description2" : "서울 종로구 사직로 130",
+        "url" : "https://naver.me/GI8vKvbj",
+        "iconSize" : [35, 35]
+    },
+    {
+        "name" : "화장실",
+        "coordinates" : [37.574912324901334, 126.97343051433563],
+        "image" : "Toilet.png",
+        "description" : "한국생산성본부 1층 개방화장실",
+        "description2" : "서울 종로구 새문안로5가길 32 한국생산성본부",
+        "url" : "https://naver.me/FRLhC1XS",
+        "iconSize" : [35, 35]
+    },
+    {
+        "name" : "화장실",
+        "coordinates" : [37.57463504520264, 126.9783726090676],
+        "image" : "Toilet.png",
+        "description" : "광화문시민열린마당 개방화장실",
+        "description2" : "서울 종로구 세종로 23-3",
+        "url" : "https://naver.me/Go2kGv0q",
+        "iconSize" : [35, 35]
     }
 ]
