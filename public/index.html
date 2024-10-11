@@ -244,7 +244,7 @@
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script>
         // 지도를 초기화합니다.
-        var map = L.map('map').setView([37.5759, 126.9768], 19); // 서울 좌표 기준
+        var map = L.map('map').setView([37.565537142, 126.977977649], 19); // 서울 좌표 기준
 
         // OpenStreetMap 타일을 추가합니다.
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -314,6 +314,12 @@
         // 섹터를 검색하는 함수
         function searchSector() {
             const searchTerm = document.getElementById('search-box').value.toLowerCase();
+
+             // 사용자가 아무것도 입력하지 않은 경우, 초기 좌표로 이동
+            if (!searchTerm) {
+                map.setView([37.565537142, 126.977977649], 19); // 초기 설정 좌표로 이동
+                return;
+            }
 
             removeAllmarkers();
 
