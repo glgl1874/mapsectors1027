@@ -9,15 +9,6 @@
         "iconSize" : [35, 35]
     },
     {
-        "name" : "경복궁",
-        "coordinates" : [37.575128, 126.976749],
-        "image" : "pin.png",
-        "description" : "경복궁",
-        "description2" : "경복궁주소",
-        "url" : "https://naver.me/xM2Xu8TC",
-        "iconSize" : [35, 35]
-    },
-    {
         "name" : "병원",
         "coordinates" : [37.56714211033935, 126.96705222129822],
         "image" : "Hospital.png",

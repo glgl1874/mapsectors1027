@@ -66,7 +66,7 @@
         }
         #guide-btn {
             position: absolute;
-            right: -40%;
+            right: -30%;
             top : 20%;
             transform : translateY(-50%);
             width: 80px;
@@ -257,6 +257,8 @@
         let sectors = [];
         let points = [];
         const zoomThreshold = 18;
+        const imageUrl = 'mainstage.png';
+        const imageBounds = [[37.565022631, 126.977438525], [37.5661537, 126.978569594]];
 
         Promise.all([
             fetch('/sectors').then(response => response.json()),
