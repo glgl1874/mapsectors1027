@@ -234,7 +234,7 @@
                 <사용설명서> <br>
                 1. 검색창에 검색어를 입력하세요.<br>
                 2. '검색' 버튼을 클릭하세요.<br><br>
-                [검색어] : 구역이름(예:A1), 화장실, 병원,<br>
+                [검색어] : 구역이름(예:1), 화장실, 병원,<br>
                 안내, 무대
             </p>
         </div>
@@ -257,8 +257,24 @@
         let sectors = [];
         let points = [];
         const zoomThreshold = 18;
-        const imageUrl = 'mainstage.png';
-        const imageBounds = [[37.565022631, 126.977438525], [37.5661537, 126.978569594]];
+        const mainstageUrl = 'mainstage.png';
+        const stageUrl = 'stage.png';
+        const mainstageBounds = [[37.565179959, 126.977438524], [37.566034272, 126.978513083]];
+        const stageBounds1 = [[37.573806653, 126.976362814], [37.57401009, 126.976618698]];
+        const stageBounds2 = [[37.573775663, 126.977088963], [37.57398452, 126.977351664]];
+        const stageBounds3 = [[37.57198039, 126.976354919], [37.57218902, 126.976617338]];
+        const stageBounds4 = [[37.571984382, 126.977101086], [37.57219399, 126.977364732]];
+        const stageBounds5 = [[37.5701988, 126.976274881], [37.57040748, 126.976537361]];
+        const stageBounds6 = [[37.570203156, 126.97710036], [37.57041407, 126.97736565]];
+        const stageBounds7 = [[37.568454365, 126.97658176], [37.56866347, 126.97684477]];
+        const stageBounds8 = [[37.568437277, 126.977242875], [37.56864524, 126.977504448]];
+        const stageBounds9 = [[37.566694333, 126.976600439], [37.56690115, 126.97686057]];
+        const stageBounds10 = [[37.566677241, 126.977239994], [37.56688406, 126.97750013]];
+        const stageBounds11 = [[37.564833568, 126.976571503], [37.56504283, 126.976834711]];
+        const stageBounds12 = [[37.563100787, 126.976165149], [37.56330977, 126.976428008]];
+        const stageBounds13 = [[37.563019994, 126.976629172], [37.56322791, 126.976890687]];
+        const stageBounds14 = [[37.561411549, 126.975540194], [37.5616216, 126.975804391]];
+        const stageBounds15 = [[37.561312681, 126.975978735], [37.56152273, 126.976242933]];
 
         Promise.all([
             fetch('/sectors').then(response => response.json()),
@@ -276,8 +292,26 @@
                     html: `<div>${sector.name}</div>`,
                 });
                 const marker = L.marker(centroid, { icon: sectorLabel }).addTo(map);
+
                 sectorMarkers.push(marker);
             });
+
+            L.imageOverlay(mainstageUrl, mainstageBounds, {interactive: true, opacity: 1}).addTo(map);
+            L.imageOverlay(stageUrl, stageBounds1, {interactive: true, opacity: 1}).addTo(map);
+            L.imageOverlay(stageUrl, stageBounds2, {interactive: true, opacity: 1}).addTo(map);
+            L.imageOverlay(stageUrl, stageBounds3, {interactive: true, opacity: 1}).addTo(map);
+            L.imageOverlay(stageUrl, stageBounds4, {interactive: true, opacity: 1}).addTo(map);
+            L.imageOverlay(stageUrl, stageBounds5, {interactive: true, opacity: 1}).addTo(map);
+            L.imageOverlay(stageUrl, stageBounds6, {interactive: true, opacity: 1}).addTo(map);
+            L.imageOverlay(stageUrl, stageBounds7, {interactive: true, opacity: 1}).addTo(map);
+            L.imageOverlay(stageUrl, stageBounds8, {interactive: true, opacity: 1}).addTo(map);
+            L.imageOverlay(stageUrl, stageBounds9, {interactive: true, opacity: 1}).addTo(map);
+            L.imageOverlay(stageUrl, stageBounds10, {interactive: true, opacity: 1}).addTo(map);
+            L.imageOverlay(stageUrl, stageBounds11, {interactive: true, opacity: 1}).addTo(map);
+            L.imageOverlay(stageUrl, stageBounds12, {interactive: true, opacity: 1}).addTo(map);
+            L.imageOverlay(stageUrl, stageBounds13, {interactive: true, opacity: 1}).addTo(map);
+            L.imageOverlay(stageUrl, stageBounds14, {interactive: true, opacity: 1}).addTo(map);
+            L.imageOverlay(stageUrl, stageBounds15, {interactive: true, opacity: 1}).addTo(map);
 
             points.forEach(point => {
                     const customIcon = L.icon({

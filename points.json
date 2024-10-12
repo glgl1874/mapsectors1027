@@ -1,11 +1,137 @@
 [
     {
-        "name" : "서울타워",
-        "coordinates" : [37.570114, 126.977124],
-        "image" : "pin.png",
-        "description" : "서울타워",
-        "description2" : "서울타워주소",
-        "url" : "https://naver.me/xM2Xu8TC",
+        "name" : "무대",
+        "coordinates" : [37.573960757, 126.976508511],
+        "image" : "stagepin.png",
+        "description" : "중계무대차",
+        "description2" : "9-10구역 사이",
+        "url" : "https://naver.me/5vcKPhtw",
+        "iconSize" : [35, 35]
+    },
+    {
+        "name" : "무대",
+        "coordinates" : [37.573935247, 126.977224661],
+        "image" : "stagepin.png",
+        "description" : "중계무대차",
+        "description2" : "9-10구역 사이",
+        "url" : "https://naver.me/5huRska4",
+        "iconSize" : [35, 35]
+    },
+    {
+        "name" : "무대",
+        "coordinates" : [37.572128268, 126.976505828],
+        "image" : "stagepin.png",
+        "description" : "중계무대차",
+        "description2" : "7-8구역 사이",
+        "url" : "https://naver.me/x67I8ybU",
+        "iconSize" : [35, 35]
+    },
+    {
+        "name" : "무대",
+        "coordinates" : [37.572138897, 126.977246118],
+        "image" : "stagepin.png",
+        "description" : "중계무대차",
+        "description2" : "7-8구역 사이",
+        "url" : "https://naver.me/Gq8TP01s",
+        "iconSize" : [35, 35]
+    },
+    {
+        "name" : "무대",
+        "coordinates" : [37.570338255, 126.976403906],
+        "image" : "stagepin.png",
+        "description" : "중계무대차",
+        "description2" : "6구역 아래",
+        "url" : "https://naver.me/5HkJKRwb",
+        "iconSize" : [35, 35]
+    },
+    {
+        "name" : "무대",
+        "coordinates" : [37.570353137, 126.977238073],
+        "image" : "stagepin.png",
+        "description" : "중계무대차",
+        "description2" : "6구역 아래",
+        "url" : "https://naver.me/xs35Ed7q",
+        "iconSize" : [35, 35]
+    },
+    {
+        "name" : "무대",
+        "coordinates" : [37.568592847, 126.97672577],
+        "image" : "stagepin.png",
+        "description" : "중계무대차",
+        "description2" : "4구역",
+        "url" : "https://naver.me/GSDahmIn",
+        "iconSize" : [35, 35]
+    },
+    {
+        "name" : "무대",
+        "coordinates" : [37.568580091, 126.977388276],
+        "image" : "stagepin.png",
+        "description" : "중계무대차",
+        "description2" : "4구역",
+        "url" : "https://naver.me/GSDahmIn",
+        "iconSize" : [35, 35]
+    },
+    {
+        "name" : "무대",
+        "coordinates" : [37.566843144, 126.976741862],
+        "image" : "stagepin.png",
+        "description" : "중계무대차",
+        "description2" : "2구역",
+        "url" : "https://naver.me/GV241dLe",
+        "iconSize" : [35, 35]
+    },
+    {
+        "name" : "무대",
+        "coordinates" : [37.566836766, 126.977372181],
+        "image" : "stagepin.png",
+        "description" : "중계무대차",
+        "description2" : "2구역",
+        "url" : "https://naver.me/IgJVfw8R",
+        "iconSize" : [35, 35]
+    },
+    {
+        "name" : "무대",
+        "coordinates" : [37.564972208, 126.976725767],
+        "image" : "stagepin.png",
+        "description" : "중계무대차",
+        "description2" : "11구역",
+        "url" : "https://naver.me/5fIBAVZQ",
+        "iconSize" : [35, 35]
+    },
+    {
+        "name" : "무대",
+        "coordinates" : [37.563247934, 126.976299297],
+        "image" : "stagepin.png",
+        "description" : "중계무대차",
+        "description2" : "13구역",
+        "url" : "https://naver.me/Gxk7fhnD",
+        "iconSize" : [35, 35]
+    },
+    {
+        "name" : "무대",
+        "coordinates" : [37.563158636, 126.976771366],
+        "image" : "stagepin.png",
+        "description" : "중계무대차",
+        "description2" : "13구역",
+        "url" : "https://naver.me/Fw7rOLGY",
+        "iconSize" : [35, 35]
+    },
+    {
+        "name" : "무대",
+        "coordinates" : [37.56156827, 126.975677026],
+        "image" : "stagepin.png",
+        "description" : "중계무대차",
+        "description2" : "14-15구역 사이",
+        "url" : "https://naver.me/57VRDzEF",
+        "iconSize" : [35, 35]
+    },
+    {
+        "name" : "무대",
+        "coordinates" : [37.561466213, 126.976114226],
+        "image" : "stagepin.png",
+        "description" : "중계무대차",
+        "description2" : "14-15구역 사이",
+        "url" : "https://naver.me/xf5zEdrO",
         "iconSize" : [35, 35]
     },
     {
