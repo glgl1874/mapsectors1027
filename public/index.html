@@ -67,10 +67,10 @@
         #guide-btn {
             position: absolute;
             right: -30%;
-            top : 20%;
+            top : 10%;
             transform : translateY(-50%);
-            width: 80px;
-            height: 80px;
+            width: 40px;
+            height: 40px;
             background: linear-gradient(145deg, #00e1ff, #532cff); /* 그라데이션으로 입체감 추가 */
             border-radius: 50%; /* 동그란 모양 */
             box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2), -5px -5px 10px rgba(255, 255, 255, 0.5); /* 입체감 있는 그림자 */
@@ -99,7 +99,7 @@
         }
         #guide-btn::before {
             content : "?";
-            font-size : 30px;
+            font-size : 15px;
             color : #fff;
             font-weight : bold;
         }
@@ -122,9 +122,16 @@
             cursor : pointer;
         }
         #welcomeModal .modal-content {
-            width: 400px;  /* 원하는 가로 크기 */
+            width: 500px;  /* 원하는 가로 크기 */
             height: 700px; /* 원하는 세로 크기 */
-            padding: 40px; /* 여백을 더 크게 */
+            padding: 10px; /* 여백을 더 크게 */
+        }
+        @media (max-width : 768px) {
+            #welcomeModal .modal-content {
+                width : 90%;
+                height : auto;
+                padding : 20px;
+            }
         }
         button {
             padding: 20px 40px;
@@ -261,8 +268,8 @@
             var messageElem = document.getElementById("alertMessage");
 
             messageElem.innerHTML = `
-            <p style="color: red; font-size: 35px; font-weight: bold;"><주의사항></p>
-            <p style="color: blue; font-size: 16px; font-weight: bold;">
+            <p style="color: red; font-size: 40px; font-weight: bold;"><주의사항></p>
+            <p style="color: blue; font-size: 18px; font-weight: bold;">
                 1. 안내 및 질서 요원의 말에 귀기울이며 청종합니다.<br><br>
                 2. 이동간 안전에 유의하며 노약자 및 어린이의 통행을<br>우선하여 통로를 양보합니다.<br><br>
                 3. 예배 결집 장소 주위에서 달리기, 자전거, 전동기의<br>사용을 금지합니다.<br><br>
