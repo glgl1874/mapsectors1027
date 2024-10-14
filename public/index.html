@@ -121,6 +121,11 @@
             font-size : 24px;
             cursor : pointer;
         }
+        #welcomeModal .modal-content {
+            width: 30%;  /* 원하는 가로 크기 */
+            height: 80%; /* 원하는 세로 크기 */
+            padding: 40px; /* 여백을 더 크게 */
+        }
         button {
             padding: 20px 40px;
             font-size: 16px;
@@ -220,6 +225,13 @@
     </div>
     <div id="map"></div>
 
+    <div id = "welcomeModal" class = "modal">
+        <div class = "modal-content">
+            <span id = "closeBtn" class = "close">&times;</span>
+            <p id = "alertMessage"></p>
+        </div>
+    </div>
+
     <div id="customAlert" class="modal">
         <div class="modal-content">
             <span id="closeBtn" class="close">&times;</span>
@@ -232,7 +244,7 @@
             <span id = "closeGuideBtn" class = "close">&times;</span>
             <p id = "guideMessage">
                 <사용설명서> <br>
-                1. 검색창에 검색어를 입력하세요.<br>
+                1. 검색창에 [검색어]를 입력하세요.<br>
                 2. '검색' 버튼을 클릭하세요.<br><br>
                 [검색어] : 구역이름(예:1), 화장실, 병원,<br>
                 안내, 무대
@@ -243,6 +255,36 @@
     
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script>
+
+        window.onload = function() {
+            var modal = document.getElementById("welcomeModal");
+            var messageElem = document.getElementById("alertMessage");
+
+            messageElem.innerHTML = `
+            <p style="color: red; font-size: 40px; font-weight: bold;"><주의사항></p>
+            <p style="color: blue; font-size: 20px; font-weight: bold;">
+                1. 안내 및 질서 요원의 말에 귀기울이며 청종합니다.<br><br>
+                2. 이동간 안전에 유의하며 노약자 및 어린이의 통행을<br>우선하여 통로를 양보합니다.<br><br>
+                3. 예배 결집 장소 주위에서 달리기, 자전거, 전동기의<br>사용을 금지합니다.<br><br>
+                4. 예배를 방해 또는 주변인에게 위해를 주는 사람이 있으면<br>즉시 주변 안전요원 또는 경찰에게 알려주시기 바랍니다.<br><br>
+                5. 화재 또는 위험물을 발견시 즉시 주변 안전요원<br>또는 경찰에게 알려주시기 바랍니다.<br><br>
+                ------------------------------------------------<br><br>
+                *본 연합예배는 [예배]이므로 성도님들께선 하나님 앞에<br>거룩하고 경건한 자세로 임해주시기 바랍니다.<br><br>
+            </p>`;
+            modal.style.display = "block";
+
+            var closeBtn = document.getElementById("closeBtn");
+            closeBtn.onclick = function() {
+                modal.style.display = "none";
+            }
+
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        }
+
         // 지도를 초기화합니다.
         var map = L.map('map').setView([37.565537142, 126.977977649], 19); // 서울 좌표 기준
 
@@ -326,6 +368,7 @@
                     pointMarkers.push(pointMarker);
                 });
         })
+
         .catch(err => {
             console.error('섹터 데이터를 불러오는 중 오류 발생:', err);
         });
