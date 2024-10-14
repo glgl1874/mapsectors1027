@@ -2,9 +2,12 @@ const express = require('express');
 const app = express();
 const fs = require('fs');
 const path = require('path');
+const cors = require('cors');
 
 // public 디렉토리에서 정적 파일 서빙
 app.use(express.static('public'));
+
+app.use(cors());
 
 // 섹터 데이터를 제공하는 API 엔드포인트
 app.get('/sectors', (req, res) => {

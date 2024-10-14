@@ -138,7 +138,7 @@
             margin-top: 20px;
             text-align: center;
         }
-        #alertMessage p {
+        #welcomeAlertMessage p {
         color: red;
         font-size: 40px;
         font-weight: bold;
@@ -195,10 +195,10 @@
             text-align : center;
         }
         @media (max-width: 768px) {
-            #alertMessage p {
+            #welcomeAlertMessage p {
                 font-size: 28px !important; /* 휴대폰 화면에서 글자 크기를 줄임 */
             }
-            #alertMessage p:nth-child(2) {
+            #welcomeAlertMessage p:nth-child(2) {
                 font-size: 15px !important; /* 두 번째 문단에 대한 글자 크기 조정 */
             }
             h1 {
@@ -250,15 +250,15 @@
 
     <div id = "welcomeModal" class = "modal">
         <div class = "modal-content">
-            <span id = "closeBtn" class = "close">&times;</span>
-            <p id = "alertMessage"></p>
+            <span id = "welcomeCloseBtn" class = "close">&times;</span>
+            <p id = "welcomeAlertMessage"></p>
         </div>
     </div>
 
     <div id="customAlert" class="modal">
         <div class="modal-content">
-            <span id="closeBtn" class="close">&times;</span>
-            <p id="alertMessage"></p>
+            <span id="customCloseBtn" class="close">&times;</span>
+            <p id="customAlertMessage"></p>
         </div>
     </div>
 
@@ -281,7 +281,7 @@
 
         window.onload = function() {
             var modal = document.getElementById("welcomeModal");
-            var messageElem = document.getElementById("alertMessage");
+            var messageElem = document.getElementById("welcomeAlertMessage");
 
             messageElem.innerHTML = `
             <p style="color: red; font-size: 40px; font-weight: bold;"><주의사항></p>
@@ -296,7 +296,7 @@
             </p>`;
             modal.style.display = "block";
 
-            var closeBtn = document.getElementById("closeBtn");
+            var closeBtn = document.getElementById("welcomeCloseBtn");
             closeBtn.onclick = function() {
                 modal.style.display = "none";
             }
@@ -469,8 +469,8 @@
 
         function customAlert(message) {
             var modal = document.getElementById("customAlert");
-            var messageElem = document.getElementById("alertMessage");
-            var closeBtn = document.getElementById("closeBtn");
+            var messageElem = document.getElementById("customAlertMessage");
+            var closeBtn = document.getElementById("customCloseBtn");
 
             messageElem.textContent = message;
             modal.style.display = "block";
