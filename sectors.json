@@ -1,6 +1,6 @@
 [
     {
-        "name": "",
+        "name": "10",
         "coordinates": [
             [
                 37.573969716,
@@ -8,6 +8,10 @@
             ],
             [
                 37.573969716,
+                126.977588713
+            ],
+            [
+                37.575017741,
                 126.977588713
             ],
             [
@@ -74,7 +78,7 @@
         "color": "red"
     },
     {
-        "name": "",
+        "name": "6",
         "coordinates": [
             [
                 37.571061524,
@@ -100,7 +104,7 @@
         "color": "red"
     },
     {
-        "name": "",
+        "name": "7",
         "coordinates": [
             [
                 37.571061524,
@@ -152,7 +156,7 @@
         "color": "red"
     },
     {
-        "name": "",
+        "name": "8",
         "coordinates": [
             [
                 37.57201393,
@@ -204,7 +208,7 @@
         "color": "red"
     },
     {
-        "name": "",
+        "name": "9",
         "coordinates": [
             [
                 37.57294506,
@@ -256,7 +260,7 @@
         "color": "red"
     },
     {
-        "name": "",
+        "name": "5",
         "coordinates": [
             [
                 37.569113685,
@@ -334,7 +338,7 @@
         "color": "magenta"
     },
     {
-        "name": "",
+        "name": "4",
         "coordinates": [
             [
                 37.569113685,
@@ -386,7 +390,7 @@
         "color": "magenta"
     },
     {
-        "name": "",
+        "name": "3",
         "coordinates": [
             [
                 37.568263141,
@@ -438,7 +442,7 @@
         "color": "magenta"
     },
     {
-        "name": "",
+        "name": "2",
         "coordinates": [
             [
                 37.567280449,
@@ -490,7 +494,7 @@
         "color": "magenta"
     },
     {
-        "name": "",
+        "name": "1",
         "coordinates": [
             [
                 37.566439012,
@@ -546,7 +550,7 @@
         "color": "blue"
     },
     {
-        "name": "",
+        "name": "11",
         "coordinates": [
             [
                 37.565478215,
@@ -599,7 +603,7 @@
         "color": "blue"
     },
     {
-        "name": "",
+        "name": "15",
         "coordinates": [
             [
                 37.561559507,
@@ -625,7 +629,7 @@
         "color": "blue"
     },
     {
-        "name": "",
+        "name": "14",
         "coordinates": [
             [
                 37.561559507,
@@ -677,7 +681,7 @@
         "color": "blue"
     },
     {
-        "name": "",
+        "name": "13",
         "coordinates": [
             [
                 37.562452476,
@@ -755,7 +759,7 @@
         "color": "blue"
     },
     {
-        "name": "",
+        "name": "12",
         "coordinates": [
             [
                 37.563952599,
@@ -781,7 +785,7 @@
         "color": "blue"
     },
     {
-        "name": "",
+        "name": "20",
         "coordinates": [
             [
                 37.557158102,
@@ -887,7 +891,7 @@
         "color": "green"
     },
     {
-        "name": "",
+        "name": "19",
         "coordinates": [
             [
                 37.557609649,
@@ -969,7 +973,7 @@
         "color": "green"
     },
     {
-        "name": "",
+        "name": "18",
         "coordinates": [
             [
                 37.559086255,
@@ -1033,7 +1037,7 @@
         "color": "green"
     },
     {
-        "name": "",
+        "name": "17",
         "coordinates": [
             [
                 37.559859085,
@@ -1093,7 +1097,7 @@
         "color": "orange"
     },
     {
-        "name": "",
+        "name": "22",
         "coordinates": [
             [
                 37.555938376,
@@ -1119,7 +1123,7 @@
         "color": "orange"
     },
     {
-        "name": "",
+        "name": "21",
         "coordinates": [
             [
                 37.555938376,

@@ -350,17 +350,61 @@
             sectors = sectorsData;
             points = pointsData;
 
-            sectors.forEach(sector => {
-                const polygon = L.polygon(sector.coordinates, { color: sector.color }).addTo(map);
-                const centroid = polygon.getBounds().getCenter();
-                const sectorLabel = L.divIcon({
-                    className: 'sector-label',
-                    html: `<div>${sector.name}</div>`,
-                });
-                const marker = L.marker(centroid, { icon: sectorLabel }).addTo(map);
+            const sectorGroups = {};
 
-                sectorMarkers.push(marker);
+            sectors.forEach(sector => {
+                if (!sectorGroups[sector.name]) {
+                    sectorGroups[sector.name] = [];
+                }
+                sectorGroups[sector.name].push(sector);
             });
+
+            // 각 그룹(이름이 같은 섹터들)에 대해 처리
+            Object.keys(sectorGroups).forEach(sectorName => {
+                const group = sectorGroups[sectorName];
+                const centroids = [];
+
+                // 각 폴리곤의 중심 좌표를 구하고 배열에 저장
+                group.forEach(sector => {
+                    const polygon = L.polygon(sector.coordinates, { color: sector.color }).addTo(map);
+                    const centroid = getCentroid(polygon);
+                    centroids.push(centroid);
+                });
+
+                // 그룹 내의 중심점들이 2개 이상인 경우 그들의 중앙 지점 계산
+                if (centroids.length > 1) {
+                    let totalLat = 0, totalLng = 0;
+
+                    centroids.forEach(centroid => {
+                        totalLat += centroid.lat;
+                        totalLng += centroid.lng;
+                    });
+
+                    const avgLat = totalLat / centroids.length;
+                    const avgLng = totalLng / centroids.length;
+                    const groupMidpoint = { lat: avgLat, lng: avgLng };
+
+                    // 이름을 중앙에 표시
+                    const sectorLabel = L.divIcon({
+                        className: 'sector-label',
+                        html: `<div>${sectorName}</div>`,
+                    });
+                    const marker = L.marker(groupMidpoint, { icon: sectorLabel }).addTo(map);
+                    sectorMarkers.push(marker);
+                } else {
+                    // 만약 폴리곤이 1개라면 그 폴리곤의 중심에 이름을 표시
+                    const sectorLabel = L.divIcon({
+                        className: 'sector-label',
+                        html: `<div>${sectorName}</div>`,
+                    });
+                    const marker = L.marker(centroids[0], { icon: sectorLabel }).addTo(map);
+                    sectorMarkers.push(marker);
+                }
+            });
+
+            adjustLabelVisibility();
+
+
 
             L.imageOverlay(mainstageUrl, mainstageBounds, {interactive: true, opacity: 1}).addTo(map);
             L.imageOverlay(stageUrl, stageBounds1, {interactive: true, opacity: 1}).addTo(map);
@@ -396,6 +440,18 @@
         .catch(err => {
             console.error('섹터 데이터를 불러오는 중 오류 발생:', err);
         });
+
+        function getCentroid(polygon) {
+            const bounds = polygon.getBounds();
+            return bounds.getCenter();
+        }
+
+        function calculateMidpoint(latlng1, latlng2) {
+            return [
+                (latlng1.lat + latlng2.lat) / 2,
+                (latlng1.lng + latlng2.lng) / 2
+            ];
+        }
 
         function removeAllmarkers() {
             pointMarkers.forEach(marker => map.removeLayer(marker));
