@@ -486,7 +486,7 @@
             const pointResults = points.filter(point => point.name.toLowerCase() === searchTerm);
 
             if (sectorResults.length === 0 && pointResults.length === 0) {
-                customAlert("해당하는 구역이 존재하지 않습니다.");
+                customAlert("잘못된 검색어입니다.");
                 return;
             }
 

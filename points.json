@@ -979,5 +979,140 @@
         "description2" : "서울 서대문구 북아현로 24 북아현동주민센터",
         "url" : "https://naver.me/GalySPAu",
         "iconSize" : [35, 35]
+    },
+    {
+        "name" : "화장실",
+        "coordinates" : [37.542807047, 126.960952307],
+        "image" : "Toilet.png",
+        "description" : "효창 운동장 개방화장실",
+        "description2" : "서울 용산구 효창동 255-11",
+        "url" : "https://naver.me/52M4KzCc",
+        "iconSize" : [35, 35]
+    },
+    {
+        "name" : "화장실",
+        "coordinates" : [37.542381693, 126.961815973],
+        "image" : "Toilet.png",
+        "description" : "백범김구기념관 개방화장실",
+        "description2" : "서울 용산구 효창원로 177-18 효창공원",
+        "url" : "https://naver.me/xNLgAkMY",
+        "iconSize" : [35, 35]
+    },
+    {
+        "name" : "화장실",
+        "coordinates" : [37.541247074, 126.962976028],
+        "image" : "Toilet.png",
+        "description" : "효창종합사회복지관 개방화",
+        "description2" : "서울 용산구 효창원로 146-12 효창종합사회복지관",
+        "url" : "https://naver.me/5GpT3sx8",
+        "iconSize" : [35, 35]
+    },
+    {
+        "name" : "화장실",
+        "coordinates" : [37.539241507, 126.961439124],
+        "image" : "Toilet.png",
+        "description" : "효창공원앞역 6호선 역내 화장실",
+        "description2" : "서울 용산구 백범로 287",
+        "url" : "https://naver.me/GEIwJdn4",
+        "iconSize" : [35, 35]
+    },
+    {
+        "name" : "화장실",
+        "coordinates" : [37.538237643, 126.963735082],
+        "image" : "Toilet.png",
+        "description" : "효창공원앞역 경의중앙선 역내 화장실",
+        "description2" : "서울 용산구 백범로 287",
+        "url" : "https://naver.me/xlCWW3rP",
+        "iconSize" : [35, 35]
+    },
+    {
+        "name" : "화장실",
+        "coordinates" : [37.540419758, 126.971325744],
+        "image" : "Toilet.png",
+        "description" : "남영역 1호선 역내 화장실",
+        "description2" : "서울 용산구 한강대로 77길 25",
+        "url" : "https://naver.me/GEIWdjCj",
+        "iconSize" : [35, 35]
+    },
+    {
+        "name" : "화장실",
+        "coordinates" : [37.542952719, 126.968541611],
+        "image" : "Toilet.png",
+        "description" : "돌모루공원 개방화장실",
+        "description2" : "서울 용산구 청파동3가",
+        "url" : "https://naver.me/FxFab5Yp",
+        "iconSize" : [35, 35]
+    },
+    {
+        "name" : "화장실",
+        "coordinates" : [37.537223131, 126.9677289],
+        "image" : "Toilet.png",
+        "description" : "용산구문화체육센터 개방화장실",
+        "description2" : "서울 용산구 백범로 350 용산문화센타",
+        "url" : "https://naver.me/502F5o83",
+        "iconSize" : [35, 35]
+    },
+    {
+        "name" : "화장실",
+        "coordinates" : [37.5354259, 126.97402673],
+        "image" : "Toilet.png",
+        "description" : "삼각지역 4호선 역내 화장실",
+        "description2" : "서울 용산구 한강대로 180",
+        "url" : "https://naver.me/G4xIM3L7",
+        "iconSize" : [35, 35]
+    },
+    {
+        "name" : "화장실",
+        "coordinates" : [37.534822913, 126.974284221],
+        "image" : "Toilet.png",
+        "description" : "서울보훈지청 개방화장실",
+        "description2" : "서울 용산구 이태원로 6 서울지방보훈청",
+        "url" : "https://naver.me/F5bAxDwo",
+        "iconSize" : [35, 35]
+    },
+    {
+        "name" : "화장실",
+        "coordinates" : [37.534093362, 126.971534951],
+        "image" : "Toilet.png",
+        "description" : "한마음공원 개방화장실",
+        "description2" : "서울 용산구 한강대로 167 용산소방서",
+        "url" : "https://naver.me/G4W3hG5k",
+        "iconSize" : [35, 35]
+    },
+    {
+        "name" : "화장실",
+        "coordinates" : [37.529809524, 126.964915258],
+        "image" : "Toilet.png",
+        "description" : "용산역 1호선 역내 화장실",
+        "description2" : "서울 용산구 한강대로 23길 55",
+        "url" : "https://naver.me/xC1fAF9a",
+        "iconSize" : [35, 35]
+    },
+    {
+        "name" : "화장실",
+        "coordinates" : [37.529001226, 126.967779856],
+        "image" : "Toilet.png",
+        "description" : "신용산역 4호선 역내 화장실",
+        "description2" : "서울 용산구 한강대로 112",
+        "url" : "https://naver.me/FNGQARIh",
+        "iconSize" : [35, 35]
+    },
+    {
+        "name" : "화장실",
+        "coordinates" : [37.529988199, 126.969507199],
+        "image" : "Toilet.png",
+        "description" : "용산우체국 개방화장실",
+        "description2" : "서울 용산구 한강대로 118 서울용산우체국",
+        "url" : "https://naver.me/5pjpPamR",
+        "iconSize" : [35, 35]
+    },
+    {
+        "name" : "화장실",
+        "coordinates" : [37.528109955, 126.969206796],
+        "image" : "Toilet.png",
+        "description" : "한강로동 주민센터 개방화장실",
+        "description2" : "서울 용산구 한강로2가 187-5",
+        "url" : "https://naver.me/FDn6wNPY",
+        "iconSize" : [35, 35]
     }
 ]
