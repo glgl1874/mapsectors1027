@@ -476,6 +476,7 @@
 
              // 사용자가 아무것도 입력하지 않은 경우, 초기 좌표로 이동
             if (!searchTerm) {
+                removeAllmarkers();
                 map.setView([37.565537142, 126.977977649], 19); // 초기 설정 좌표로 이동
                 return;
             }
