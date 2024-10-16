@@ -326,21 +326,16 @@
         const mainstageUrl = 'mainstage.png';
         const stageUrl = 'stage.png';
         const mainstageBounds = [[37.565179959, 126.977438524], [37.566034272, 126.978513083]];
-        const stageBounds1 = [[37.573806653, 126.976362814], [37.57401009, 126.976618698]];
-        const stageBounds2 = [[37.573775663, 126.977088963], [37.57398452, 126.977351664]];
-        const stageBounds3 = [[37.57198039, 126.976354919], [37.57218902, 126.976617338]];
-        const stageBounds4 = [[37.571984382, 126.977101086], [37.57219399, 126.977364732]];
-        const stageBounds5 = [[37.5701988, 126.976274881], [37.57040748, 126.976537361]];
-        const stageBounds6 = [[37.570203156, 126.97710036], [37.57041407, 126.97736565]];
-        const stageBounds7 = [[37.568454365, 126.97658176], [37.56866347, 126.97684477]];
-        const stageBounds8 = [[37.568437277, 126.977242875], [37.56864524, 126.977504448]];
-        const stageBounds9 = [[37.566694333, 126.976600439], [37.56690115, 126.97686057]];
-        const stageBounds10 = [[37.566677241, 126.977239994], [37.56688406, 126.97750013]];
-        const stageBounds11 = [[37.564833568, 126.976571503], [37.56504283, 126.976834711]];
-        const stageBounds12 = [[37.563100787, 126.976165149], [37.56330977, 126.976428008]];
-        const stageBounds13 = [[37.563019994, 126.976629172], [37.56322791, 126.976890687]];
-        const stageBounds14 = [[37.561411549, 126.975540194], [37.5616216, 126.975804391]];
-        const stageBounds15 = [[37.561312681, 126.975978735], [37.56152273, 126.976242933]];
+        const stageBounds1 = [[37.569902231, 126.976717441], [37.570111444, 126.976977243]];
+        const stageBounds2 = [[37.569019797, 126.977289815], [37.569231604, 126.977550044]];
+        const stageBounds3 = [[37.568454365, 126.97658176], [37.568667387, 126.97684477]];
+        const stageBounds4 = [[37.566694333, 126.976600439], [37.566907358, 126.97686057]];
+        const stageBounds5 = [[37.565806247, 126.977154883], [37.566018194, 126.977422118]];
+        const stageBounds6 = [[37.562728712, 126.976650629], [37.562940263, 126.976910804]];
+        const stageBounds7 = [[37.561792138, 126.976311327], [37.562002628, 126.976568825]];
+        const stageBounds8 = [[37.560963986, 126.976004216], [37.561175549, 126.976268413]];
+        const stageBounds9 = [[37.559523472, 126.974067663], [37.559735024, 126.974330513]];
+        const stageBounds10 = [[37.554963913, 126.971702628], [37.555176286, 126.971967344]];
 
         Promise.all([
             fetch('/sectors').then(response => response.json()),
@@ -417,11 +412,6 @@
             L.imageOverlay(stageUrl, stageBounds8, {interactive: true, opacity: 1}).addTo(map);
             L.imageOverlay(stageUrl, stageBounds9, {interactive: true, opacity: 1}).addTo(map);
             L.imageOverlay(stageUrl, stageBounds10, {interactive: true, opacity: 1}).addTo(map);
-            L.imageOverlay(stageUrl, stageBounds11, {interactive: true, opacity: 1}).addTo(map);
-            L.imageOverlay(stageUrl, stageBounds12, {interactive: true, opacity: 1}).addTo(map);
-            L.imageOverlay(stageUrl, stageBounds13, {interactive: true, opacity: 1}).addTo(map);
-            L.imageOverlay(stageUrl, stageBounds14, {interactive: true, opacity: 1}).addTo(map);
-            L.imageOverlay(stageUrl, stageBounds15, {interactive: true, opacity: 1}).addTo(map);
 
             points.forEach(point => {
                     const customIcon = L.icon({

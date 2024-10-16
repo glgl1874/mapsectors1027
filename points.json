@@ -1,56 +1,20 @@
 [
     {
         "name" : "무대",
-        "coordinates" : [37.573960757, 126.976508511],
+        "coordinates" : [37.570012985, 126.976849151],
         "image" : "stagepin.png",
         "description" : "중계무대차",
-        "description2" : "9-10구역 사이",
-        "url" : "https://naver.me/5vcKPhtw",
+        "description2" : "6구역",
+        "url" : "https://naver.me/G58zVZds",
         "iconSize" : [35, 35]
     },
     {
         "name" : "무대",
-        "coordinates" : [37.573935247, 126.977224661],
+        "coordinates" : [37.569126468, 126.977415099],
         "image" : "stagepin.png",
         "description" : "중계무대차",
-        "description2" : "9-10구역 사이",
-        "url" : "https://naver.me/5huRska4",
-        "iconSize" : [35, 35]
-    },
-    {
-        "name" : "무대",
-        "coordinates" : [37.572128268, 126.976505828],
-        "image" : "stagepin.png",
-        "description" : "중계무대차",
-        "description2" : "7-8구역 사이",
-        "url" : "https://naver.me/x67I8ybU",
-        "iconSize" : [35, 35]
-    },
-    {
-        "name" : "무대",
-        "coordinates" : [37.572138897, 126.977246118],
-        "image" : "stagepin.png",
-        "description" : "중계무대차",
-        "description2" : "7-8구역 사이",
-        "url" : "https://naver.me/Gq8TP01s",
-        "iconSize" : [35, 35]
-    },
-    {
-        "name" : "무대",
-        "coordinates" : [37.570338255, 126.976403906],
-        "image" : "stagepin.png",
-        "description" : "중계무대차",
-        "description2" : "6구역 아래",
-        "url" : "https://naver.me/5HkJKRwb",
-        "iconSize" : [35, 35]
-    },
-    {
-        "name" : "무대",
-        "coordinates" : [37.570353137, 126.977238073],
-        "image" : "stagepin.png",
-        "description" : "중계무대차",
-        "description2" : "6구역 아래",
-        "url" : "https://naver.me/xs35Ed7q",
+        "description2" : "청계광장",
+        "url" : "https://naver.me/xzx9bFrH",
         "iconSize" : [35, 35]
     },
     {
@@ -58,17 +22,8 @@
         "coordinates" : [37.568592847, 126.97672577],
         "image" : "stagepin.png",
         "description" : "중계무대차",
-        "description2" : "4구역",
-        "url" : "https://naver.me/GSDahmIn",
-        "iconSize" : [35, 35]
-    },
-    {
-        "name" : "무대",
-        "coordinates" : [37.568580091, 126.977388276],
-        "image" : "stagepin.png",
-        "description" : "중계무대차",
-        "description2" : "4구역",
-        "url" : "https://naver.me/GSDahmIn",
+        "description2" : "7구역",
+        "url" : "https://naver.me/FHlvj7pY",
         "iconSize" : [35, 35]
     },
     {
@@ -76,62 +31,62 @@
         "coordinates" : [37.566843144, 126.976741862],
         "image" : "stagepin.png",
         "description" : "중계무대차",
-        "description2" : "2구역",
-        "url" : "https://naver.me/GV241dLe",
+        "description2" : "9구역",
+        "url" : "https://naver.me/5EUiIWik",
         "iconSize" : [35, 35]
     },
     {
         "name" : "무대",
-        "coordinates" : [37.566836766, 126.977372181],
+        "coordinates" : [37.565922562, 126.977291713],
         "image" : "stagepin.png",
         "description" : "중계무대차",
-        "description2" : "2구역",
-        "url" : "https://naver.me/IgJVfw8R",
+        "description2" : "10구역",
+        "url" : "https://naver.me/FY3MZIb4",
         "iconSize" : [35, 35]
     },
     {
         "name" : "무대",
-        "coordinates" : [37.564972208, 126.976725767],
-        "image" : "stagepin.png",
-        "description" : "중계무대차",
-        "description2" : "11구역",
-        "url" : "https://naver.me/5fIBAVZQ",
-        "iconSize" : [35, 35]
-    },
-    {
-        "name" : "무대",
-        "coordinates" : [37.563247934, 126.976299297],
+        "coordinates" : [37.562843968, 126.976783435],
         "image" : "stagepin.png",
         "description" : "중계무대차",
         "description2" : "13구역",
-        "url" : "https://naver.me/Gxk7fhnD",
+        "url" : "https://naver.me/58NpnN9S",
         "iconSize" : [35, 35]
     },
     {
         "name" : "무대",
-        "coordinates" : [37.563158636, 126.976771366],
+        "coordinates" : [37.561897828, 126.976440109],
         "image" : "stagepin.png",
         "description" : "중계무대차",
-        "description2" : "13구역",
-        "url" : "https://naver.me/Fw7rOLGY",
+        "description2" : "14구역",
+        "url" : "https://naver.me/GKUZsUeo",
         "iconSize" : [35, 35]
     },
     {
         "name" : "무대",
-        "coordinates" : [37.56156827, 126.975677026],
+        "coordinates" : [37.561073932, 126.976133001],
         "image" : "stagepin.png",
         "description" : "중계무대차",
-        "description2" : "14-15구역 사이",
-        "url" : "https://naver.me/57VRDzEF",
+        "description2" : "15구역",
+        "url" : "https://naver.me/5XJjqJMI",
         "iconSize" : [35, 35]
     },
     {
         "name" : "무대",
-        "coordinates" : [37.561466213, 126.976114226],
+        "coordinates" : [37.559631298, 126.974200469],
         "image" : "stagepin.png",
         "description" : "중계무대차",
-        "description2" : "14-15구역 사이",
-        "url" : "https://naver.me/xf5zEdrO",
+        "description2" : "17구역",
+        "url" : "https://naver.me/FRLQKuud",
+        "iconSize" : [35, 35]
+    },
+    {
+        "name" : "무대",
+        "coordinates" : [37.555070355, 126.971838777],
+        "image" : "stagepin.png",
+        "description" : "중계무대차",
+        "description2" : "22구역",
+        "url" : "https://naver.me/Fafa9eap",
         "iconSize" : [35, 35]
     },
     {
@@ -142,6 +97,96 @@
         "description2" : "서울 종로구 새문안로 9 적십자병원",
         "url" : "https://naver.me/xM2Xu8TC",
         "iconSize" : [70, 70]
+    },
+    {
+        "name" : "화장실",
+        "coordinates" : [37.570012985, 126.976849149],
+        "image" : "MToilet.png",
+        "description" : "간이화장실",
+        "description2" : "6구역",
+        "url" : "https://naver.me/G58zVZds",
+        "iconSize" : [45, 45]
+    },
+    {
+        "name" : "화장실",
+        "coordinates" : [37.569126468, 126.977415098],
+        "image" : "MToilet.png",
+        "description" : "간이화장실",
+        "description2" : "청계광장",
+        "url" : "https://naver.me/xzx9bFrH",
+        "iconSize" : [45, 45]
+    },
+    {
+        "name" : "화장실",
+        "coordinates" : [37.568592847, 126.97672576],
+        "image" : "MToilet.png",
+        "description" : "간이화장실",
+        "description2" : "7구역",
+        "url" : "https://naver.me/FHlvj7pY",
+        "iconSize" : [45, 45]
+    },
+    {
+        "name" : "화장실",
+        "coordinates" : [37.566843144, 126.976741861],
+        "image" : "MToilet.png",
+        "description" : "간이화장실",
+        "description2" : "9구역",
+        "url" : "https://naver.me/5EUiIWik",
+        "iconSize" : [45, 45]
+    },
+    {
+        "name" : "화장실",
+        "coordinates" : [37.565922562, 126.977291712],
+        "image" : "MToilet.png",
+        "description" : "간이화장실",
+        "description2" : "10구역",
+        "url" : "https://naver.me/FY3MZIb4",
+        "iconSize" : [45, 45]
+    },
+    {
+        "name" : "화장실",
+        "coordinates" : [37.562843968, 126.976783434],
+        "image" : "MToilet.png",
+        "description" : "간이화장실",
+        "description2" : "13구역",
+        "url" : "https://naver.me/58NpnN9S",
+        "iconSize" : [45, 45]
+    },
+    {
+        "name" : "화장실",
+        "coordinates" : [37.561897828, 126.976440107],
+        "image" : "MToilet.png",
+        "description" : "간이화장실",
+        "description2" : "14구역",
+        "url" : "https://naver.me/GKUZsUeo",
+        "iconSize" : [45, 45]
+    },
+    {
+        "name" : "화장실",
+        "coordinates" : [37.561073932, 126.976132999],
+        "image" : "MToilet.png",
+        "description" : "간이화장실",
+        "description2" : "15구역",
+        "url" : "https://naver.me/5XJjqJMI",
+        "iconSize" : [45, 45]
+    },
+    {
+        "name" : "화장실",
+        "coordinates" : [37.559631298, 126.974200467],
+        "image" : "MToilet.png",
+        "description" : "간이화장실",
+        "description2" : "17구역",
+        "url" : "https://naver.me/FRLQKuud",
+        "iconSize" : [45, 45]
+    },
+    {
+        "name" : "화장실",
+        "coordinates" : [37.555070355, 126.971838776],
+        "image" : "MToilet.png",
+        "description" : "간이화장실",
+        "description2" : "22구역",
+        "url" : "https://naver.me/Fafa9eap",
+        "iconSize" : [45, 45]
     },
     {
         "name" : "화장실",
