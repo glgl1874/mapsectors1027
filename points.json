@@ -99,6 +99,60 @@
         "iconSize" : [70, 70]
     },
     {
+        "name" : "병원",
+        "coordinates" : [37.575178, 126.9574751],
+        "image" : "Hospital.png",
+        "description" : "세란병원 응급실",
+        "description2" : "서울 종로구 통일로 256 세란병원",
+        "url" : "https://naver.me/5kLgxfjm",
+        "iconSize" : [70, 70]
+    },
+    {
+        "name" : "병원",
+        "coordinates" : [37.5672412, 127.0056589],
+        "image" : "Hospital.png",
+        "description" : "국립중앙의료원 응급의료센터",
+        "description2" : "서울 중구 을지로 245 국립중앙의료원",
+        "url" : "https://naver.me/xQOiw5xS",
+        "iconSize" : [70, 70]
+    },
+    {
+        "name" : "병원",
+        "coordinates" : [37.579323, 126.999579],
+        "image" : "Hospital.png",
+        "description" : "서울대학교병원응급의료센터",
+        "description2" : "서울 종로구 대학로 101",
+        "url" : "https://naver.me/GFpee5Gw",
+        "iconSize" : [70, 70]
+    },
+    {
+        "name" : "병원",
+        "coordinates" : [37.561999044, 126.940641154],
+        "image" : "Hospital.png",
+        "description" : "세브란스병원 응급진료센터",
+        "description2" : "서울 서대문구 연세로 50 연세대학교",
+        "url" : "https://naver.me/FNm7dRhz",
+        "iconSize" : [70, 70]
+    },
+    {
+        "name" : "병원",
+        "coordinates" : [37.552461957, 126.933620508],
+        "image" : "Hospital.png",
+        "description" : "신촌연세병원 응급실",
+        "description2" : "서울 마포구 서강로 110",
+        "url" : "https://naver.me/xaPUoGjP",
+        "iconSize" : [70, 70]
+    },
+    {
+        "name" : "병원",
+        "coordinates" : [37.534057134, 127.004540558],
+        "image" : "Hospital.png",
+        "description" : "순천향대학교 부속 서울병원 응급의료센터",
+        "description2" : "서울 용산구 대사관로 59 순천향대학병원",
+        "url" : "https://naver.me/GeWBIrMw",
+        "iconSize" : [70, 70]
+    },
+    {
         "name" : "화장실",
         "coordinates" : [37.570012985, 126.976849149],
         "image" : "MToilet.png",

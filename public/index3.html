@@ -48,6 +48,14 @@
             background-color: transparent;
             padding: 0;
         }
+        #search-box {
+            padding: 20px;
+            width: 400px;
+            font-size: 16px;
+            border: 0px;
+            border-radius: 20px;
+            text-align: center;
+        }
         #search-bar {
             display: flex;
             flex-direction: row;
@@ -56,40 +64,80 @@
             margin: 10px;
             position : relative;
         }
+        #guide-btn {
+            position: absolute;
+            right: -30%;
+            top : 10%;
+            transform : translateY(-50%);
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(145deg, #00e1ff, #532cff); /* 그라데이션으로 입체감 추가 */
+            border-radius: 50%; /* 동그란 모양 */
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2), -5px -5px 10px rgba(255, 255, 255, 0.5); /* 입체감 있는 그림자 */
+            border: none;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: transform 0.2s ease; /* 버튼을 클릭할 때 애니메이션 추가 */
+        }
+        #guideModal {
+            display : none;
+            position : fixed;
+            z-index : 1000;
+            left : 0;
+            top : 0;
+            width : 100%;
+            height : 100%;
+            background-color : rgba(0, 0, 0, 0.4);
+        }
+        #guide-btn:hover {
+            transform : scale(1.1);
+        }
+        #guide-btn:active {
+            transform : scale(0.95);
+        }
+        #guide-btn::before {
+            content : "?";
+            font-size : 30px;
+            color : #fff;
+            font-weight : bold;
+        }
+        #guideModal .modal-content {
+            position : absolute;
+            top : 50%;
+            left : 50%;
+            transform : translate(-50%, -50%);
+            background-color : white;
+            padding : 20px;
+            border : 3px solid #007bff;
+            border-radius : center;
+            box-shadow : 0px 0px 10px rgba(0, 0, 0, 0.5);
+        }
+        #guideModal .close {
+            position : absolute;
+            top : 10px;
+            right : 20px;
+            font-size : 24px;
+            cursor : pointer;
+        }
         #welcomeModal .modal-content {
             width: 500px;  /* 원하는 가로 크기 */
             height: auto; /* 원하는 세로 크기 */
             padding: 10px; /* 여백을 더 크게 */
         }
-
         button {
-            padding: 15px 30px;
-            font-size: 18px;
-            font-weight: bold;
-            text-shadow: 
-                0 0 1px #000, /* 얇은 블러 효과 */
-                0 0 0.5px #000; /* 아주 미세한 외곽선 */
-            margin: 10px;
+            padding: 20px 40px;
+            font-size: 16px;
+            margin-left: 10px;
             cursor: pointer;
-            border: none;
-            border-radius: 50px;
-            background: linear-gradient(135deg, #00ffea, #00ff73);
-            color: rgb(255, 255, 255);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            transition: background 0.3s ease, transform 0.2s ease;
-            white-space : nowrap;
+            border: 0px;
+            border-radius: 20px;
         }
-
-        button:hover,
-        button.active {
-            background: linear-gradient(135deg, #2575fc, #6a11cb);
-            transform: scale(1.05);
+        #search-results {
+            margin-top: 20px;
+            text-align: center;
         }
-
-        button:active {
-            transform: scale(0.95);
-        }
-
         #welcomeAlertMessage p {
         color: red;
         font-size: 40px;
@@ -172,6 +220,14 @@
                 font-size: 14px;
                 width: 100%;
             }
+            #guide-btn {
+                right : -25%;
+                width : 40px;
+                height : 40px;
+            }
+            #guide-btn::before {
+                font-size : 20px;
+            }
             #welcomeModal .modal-content {
                 width : 80%;
                 height : auto;
@@ -183,12 +239,11 @@
 <body>
     <div id="container-wrapper">
         <div id="container">
-            <h1>예 배 안 내 지 도</h1>
+            <h1>자 리 배 치 도</h1>
             <div id="search-bar">
-                <button onclick = "searchSectorByName('무대')">무대</button>
-                <button onclick = "searchSectorByName('화장실')">화장실</button>
-                <button onclick = "searchSectorByName('병원')">병원</button>
-                <button onclick = "resetMap()">초기화</button>
+                <input type="text" id="search-box" placeholder="검색어를 입력해주세요.">
+                <button onclick="searchSector()">검색</button>
+                <button id = "guide-btn" onclick = "showGuide()"></button>
             </div>
         </div>
     </div>
@@ -205,6 +260,19 @@
         <div class="modal-content">
             <span id="customCloseBtn" class="close">&times;</span>
             <p id="customAlertMessage"></p>
+        </div>
+    </div>
+
+    <div id = "guideModal" class = "modal">
+        <div class = "modal-content">
+            <span id = "closeGuideBtn" class = "close">&times;</span>
+            <p id = "guideMessage">
+                <사용설명서> <br>
+                1. 검색창에 [검색어]를 입력하세요.<br>
+                2. '검색' 버튼을 클릭하세요.<br><br>
+                [검색어] : 구역이름(예:1), 화장실, 병원,<br>
+                안내, 무대
+            </p>
         </div>
     </div>
 
@@ -268,15 +336,6 @@
         const stageBounds8 = [[37.560963986, 126.976004216], [37.561175549, 126.976268413]];
         const stageBounds9 = [[37.559523472, 126.974067663], [37.559735024, 126.974330513]];
         const stageBounds10 = [[37.554963913, 126.971702628], [37.555176286, 126.971967344]];
-
-        const buttons = document.querySelectorAll("button");
-
-        buttons.forEach(button => {
-            button.addEventListener("click", function() {
-                buttons.forEach(btn => btn.classList.remove("active"));
-                this.classList.add("active");
-            });
-        });
 
         Promise.all([
             fetch('/sectors').then(response => response.json()),
@@ -377,6 +436,13 @@
             return bounds.getCenter();
         }
 
+        function calculateMidpoint(latlng1, latlng2) {
+            return [
+                (latlng1.lat + latlng2.lat) / 2,
+                (latlng1.lng + latlng2.lng) / 2
+            ];
+        }
+
         function removeAllmarkers() {
             pointMarkers.forEach(marker => map.removeLayer(marker));
         }
@@ -392,17 +458,18 @@
             });
         }
 
-        function resetMap() {
-            removeAllmarkers();
-            map.setView([37.565537142, 126.977977649], 19);
-            setupPoints();
-        }
-
         map.on('zoomend', adjustLabelVisibility);
             
         // 섹터를 검색하는 함수
-        function searchSectorByName(name) {
-            const searchTerm = name.toLowerCase();
+        function searchSector() {
+            const searchTerm = document.getElementById('search-box').value.toLowerCase();
+
+             // 사용자가 아무것도 입력하지 않은 경우, 초기 좌표로 이동
+            if (!searchTerm) {
+                removeAllmarkers();
+                map.setView([37.565537142, 126.977977649], 19); // 초기 설정 좌표로 이동
+                return;
+            }
 
             removeAllmarkers();
 
@@ -437,6 +504,12 @@
             }
         }
 
+        document.getElementById('search-box').addEventListener('keydown', function(event) {
+            if (event.key === 'Enter') {
+                searchSector();
+            }
+        });
+
         function closeModal() {
             var modal = document.getElementById("customAlert");
             modal.style.display = "none";
@@ -467,6 +540,22 @@
             });
         }
 
+        function showGuide() {
+            var modal = document.getElementById("guideModal");
+            modal.style.display = "block";
+        }
+
+        document.getElementById("closeGuideBtn").onclick = function() {
+            var modal = document.getElementById("guideModal");
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            var modal = document.getElementById("guideModal");
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
     </script>
 </body>
 </html>
