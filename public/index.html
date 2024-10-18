@@ -6,6 +6,22 @@
     <title>10/27 한국교회연합예배 자리배치도</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <style>
+        @font-face {
+            font-family : 'JalnanGothicTTF';
+            src : url('JalnanGothicTTF.ttf') format('truetype');
+        }
+        @font-face {
+            font-family : 'JalnanGothic';
+            src : url('JalnanGothic.otf') format('truetype');
+        }
+        @font-face {
+            font-family : 'SCDream4';
+            src : url('SCDream4.otf') format('truetype');
+        }
+        @font-face {
+            font-family : 'GmarketSansMedium';
+            src : url('GmarketSansMedium.otf') format('truetype');
+        }
         body, html{
             height: 100%;
             width: 100%;
@@ -27,34 +43,42 @@
             margin: 15px;
             border-radius: 20px;
         }
-        h1 {
-            font-family: 'Arial', sans-serif;
-            font-size: 48px;
-            margin: 0px 0;
-            text-align: center;
-        }
         #container {
-            width: 100%;
-            max-width: 100%;
+            display: flex;
+            flex-direction: column; /* 세로 방향으로 배치 */
+            justify-content: flex-start; /* 세로 상단 정렬 */
+            align-items: center; /* 가로 중앙 정렬 */
             height: 140px;
-            max-height: 140px;
-            background-color: hsl(214, 100%, 93%);
+            width : 600px;
+            background-color: #D2EEFF;
+            color: #151819;
             padding: 20px;
             border-radius: 20px;
             box-shadow: 0 6px 10px 5px rgba(0, 0, 0, 0.2);
             margin: 5px;
+            position : relative;
         }
-        #container-wrapper {
-            background-color: transparent;
-            padding: 0;
+
+        h1 {
+            margin : 0;
+            padding-top : 10px;
+            font-family: 'JalnanGothic', sans-serif;
+            font-size: 48px;
+            text-align: center;
+            letter-spacing : -2.8px;
         }
         #search-bar {
             display: flex;
+            justify-content: center; /* 버튼들을 가로 중앙 정렬 */
             flex-direction: row;
             align-items: center;
-            justify-content: center;
-            margin: 10px;
+            margin: 0;
             position : relative;
+        }
+
+        #container-wrapper {
+            background-color: transparent;
+            padding: 0;
         }
         #welcomeModal .modal-content {
             width: 500px;  /* 원하는 가로 크기 */
@@ -63,21 +87,19 @@
         }
 
         button {
-            padding: 15px 30px;
-            font-size: 18px;
-            font-weight: bold;
-            text-shadow: 
-                0 0 1px #000, /* 얇은 블러 효과 */
-                0 0 0.5px #000; /* 아주 미세한 외곽선 */
-            margin: 10px;
+            padding: 20px 33px;
+            font-family: 'GmarketSansMedium', sans-serif;
+            font-size: 22px;
+            margin: 10px 45px;
             cursor: pointer;
             border: none;
             border-radius: 50px;
-            background: linear-gradient(135deg, #00ffea, #00ff73);
+            background: linear-gradient(135deg, #479FDE, #67CBD6);
             color: rgb(255, 255, 255);
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
             transition: background 0.3s ease, transform 0.2s ease;
             white-space : nowrap;
+            letter-spacing : 2px;
         }
 
         button:hover,
@@ -95,6 +117,34 @@
         font-size: 40px;
         font-weight: bold;
         }
+
+        #resetButton {
+            position: absolute;
+            top: -100%; /* 상단에서 20px 떨어진 위치 */
+            right: -30%; /* 오른쪽에서 20px 떨어진 위치 */
+            padding: 10px 15px;
+            font-family: 'GmarketSansMedium', sans-serif;
+            font-size: 20px;
+            cursor: pointer;
+            border: none;
+            border-radius: 10px;
+            background: linear-gradient(135deg, #435ba4, #479fdf);
+            color: white;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: background 0.3s ease, transform 0.2s ease;
+            z-index: 1000; /* 다른 요소 위에 버튼이 표시되도록 설정 */
+            display : flex;
+            align-items : center;
+        }
+        #resetButton .icon {
+            width : 20px;
+            height : 20px;
+            margin-right : 8px;
+        }
+        #resetButton:hover {
+            background: linear-gradient(135deg, #2575fc, #6a11cb);
+        }
+
         .modal {
             display: none;
             position: fixed;
@@ -167,6 +217,18 @@
             button {
                 padding: 8px 16px;
                 font-size: 14px;
+                margin : 10px 15px;
+            }
+            #resetButton {
+                right : -45%;
+                padding: 8px 16px;
+                font-size: 14px;
+                margin : 10px 15px;
+            }
+            #resetButton .icon {
+                width : 14px;
+                height : 14px;
+                margin-right : 4px;
             }
             #search-box {
                 font-size: 14px;
@@ -188,7 +250,9 @@
                 <button onclick = "searchSectorByName('무대')">무대</button>
                 <button onclick = "searchSectorByName('화장실')">화장실</button>
                 <button onclick = "searchSectorByName('병원')">병원</button>
-                <button onclick = "resetMap()">초기화</button>
+                <button id = "resetButton" onclick = "resetMap()">
+                    <img src = "reset.png" alt = "초기화 아이콘" class = "icon">초기화
+                </button>
             </div>
         </div>
     </div>
