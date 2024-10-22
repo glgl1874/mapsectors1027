@@ -120,8 +120,8 @@
 
         #resetButton {
             position: absolute;
-            top: -100%; /* 상단에서 20px 떨어진 위치 */
-            right: -30%; /* 오른쪽에서 20px 떨어진 위치 */
+            top: -90%; /* 상단에서 10px 떨어진 위치 */
+            right: -5%; /* 오른쪽에서 10px 떨어진 위치 */
             padding: 10px 15px;
             font-family: 'GmarketSansMedium', sans-serif;
             font-size: 20px;
@@ -131,15 +131,13 @@
             background: linear-gradient(135deg, #435ba4, #479fdf);
             color: white;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            transition: background 0.3s ease, transform 0.2s ease;
-            z-index: 1000; /* 다른 요소 위에 버튼이 표시되도록 설정 */
-            display : flex;
-            align-items : center;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
         }
         #resetButton .icon {
             width : 20px;
             height : 20px;
-            margin-right : 8px;
         }
         #resetButton:hover {
             background: linear-gradient(135deg, #2575fc, #6a11cb);
@@ -220,15 +218,12 @@
                 margin : 10px 15px;
             }
             #resetButton {
-                right : -45%;
-                padding: 8px 16px;
-                font-size: 14px;
-                margin : 10px 15px;
+                right : -5%;
+                padding : 6px 6px;
             }
             #resetButton .icon {
                 width : 14px;
                 height : 14px;
-                margin-right : 4px;
             }
             #search-box {
                 font-size: 14px;
@@ -251,7 +246,7 @@
                 <button onclick = "searchSectorByName('화장실')">화장실</button>
                 <button onclick = "searchSectorByName('병원')">병원</button>
                 <button id = "resetButton" onclick = "resetMap()">
-                    <img src = "reset.png" alt = "초기화 아이콘" class = "icon">초기화
+                    <img src = "reset.png" alt = "초기화 아이콘" class = "icon">
                 </button>
             </div>
         </div>
@@ -322,16 +317,18 @@
         const mainstageUrl = 'mainstage.png';
         const stageUrl = 'stage.png';
         const mainstageBounds = [[37.565179959, 126.977438524], [37.566034272, 126.978513083]];
-        const stageBounds1 = [[37.569902231, 126.976717441], [37.570111444, 126.976977243]];
-        const stageBounds2 = [[37.569019797, 126.977289815], [37.569231604, 126.977550044]];
-        const stageBounds3 = [[37.568454365, 126.97658176], [37.568667387, 126.97684477]];
-        const stageBounds4 = [[37.566694333, 126.976600439], [37.566907358, 126.97686057]];
-        const stageBounds5 = [[37.565806247, 126.977154883], [37.566018194, 126.977422118]];
-        const stageBounds6 = [[37.562728712, 126.976650629], [37.562940263, 126.976910804]];
-        const stageBounds7 = [[37.561792138, 126.976311327], [37.562002628, 126.976568825]];
-        const stageBounds8 = [[37.560963986, 126.976004216], [37.561175549, 126.976268413]];
-        const stageBounds9 = [[37.559523472, 126.974067663], [37.559735024, 126.974330513]];
-        const stageBounds10 = [[37.554963913, 126.971702628], [37.555176286, 126.971967344]];
+        const stageBounds1 = [[37.572776607, 126.9770868], [37.572951991, 126.977348315]];
+        const stageBounds2 = [[37.570352026, 126.977085462], [37.570527415, 126.977345636]];
+        const stageBounds3 = [[37.568826647, 126.977092164], [37.568999914, 126.977350997]];
+        const stageBounds4 = [[37.569158297, 126.9773604], [37.569333689, 126.977623256]];
+        const stageBounds5 = [[37.567674353, 126.977094845], [37.567849749, 126.977353678]];
+        const stageBounds6 = [[37.566254162, 126.977100209], [37.566428498, 126.977359042]];
+        const stageBounds7 = [[37.563644392, 126.97670995], [37.563818734, 126.976968783]];
+        const stageBounds8 = [[37.562776924, 126.976378699], [37.562952331, 126.976637532]];
+        const stageBounds9 = [[37.561760618, 126.97599112], [37.561937091, 126.976248612]];
+        const stageBounds10 = [[37.559699259, 126.974562841], [37.559874674, 126.974823016]];
+        const stageBounds11 = [[37.55844796, 126.973672349], [37.558622314, 126.973931182]];
+        const stageBounds12 = [[37.555915527, 126.971507812], [37.55609414, 126.971770668]];
 
         const buttons = document.querySelectorAll("button");
 
@@ -417,6 +414,8 @@
             L.imageOverlay(stageUrl, stageBounds8, {interactive: true, opacity: 1}).addTo(map);
             L.imageOverlay(stageUrl, stageBounds9, {interactive: true, opacity: 1}).addTo(map);
             L.imageOverlay(stageUrl, stageBounds10, {interactive: true, opacity: 1}).addTo(map);
+            L.imageOverlay(stageUrl, stageBounds11, {interactive: true, opacity: 1}).addTo(map);
+            L.imageOverlay(stageUrl, stageBounds12, {interactive: true, opacity: 1}).addTo(map);
 
             points.forEach(point => {
                     const customIcon = L.icon({
